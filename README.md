@@ -1,6 +1,7 @@
 # Solar Radio Burst Analysis 
 This repository is dedicated to analyzing data of solar radio bursts obtained from the CALLISTO spectrometer and applying electron density models to calculate the parameters of the coronal shock waves associated with the CME. It is mainly for type-II radio bursts. 
 
+[![DOI](https://zenodo.org/badge/234937787.svg)](https://zenodo.org/badge/latestdoi/234937787) 
 
 The main language is MATLAB. 
 
