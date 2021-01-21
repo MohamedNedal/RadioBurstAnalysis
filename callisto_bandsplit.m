@@ -24,15 +24,16 @@ datetime1 = datetime(datetime_start,'InputFormat','yyyy/MM/dd HH:mm:ss.SSS');
 datetime2 = datetime(datetime_end,'InputFormat', 'yyyy/MM/dd HH:mm:ss'); 
 dtdiff = datetime2 - datetime1; 
 duration_vector = datevec(dtdiff); 
-fprintf('The observation duration is %i hours, %i minutes, %0.2f seconds. \n',...
+fprintf('\nThe observation duration is %i hours, %i minutes, %0.2f seconds.\n',...
     duration_vector(4), duration_vector(5), duration_vector(6)) 
 
-s = input('Enter the separation between the two bands (in frequency [MHz]): \n'); 
-disp('Start clicking at the lower band ... ') 
+s = input('\nEnter the separation between the two sub-bands (in frequency [MHz]):\n'); 
+disp('\nStart clicking at the lower sub-band ...\n') 
 
 %% 
 output_arr = {}; 
 
+% repeat the analysis 'rpt' times to calculate the error 
 for j = 1:rpt 
     
     imagesc(flipud(A)); 
@@ -140,7 +141,7 @@ for j = 1:rpt
     output_arr{j, 13} = r2; 
     output_arr{j, 14} = t; 
     
-    sprintf('Ending repetition number %d successfully \n\n', j) 
+    sprintf('\nEnding repetition number %d successfully \n\n', j) 
 
 end 
 clear j 
